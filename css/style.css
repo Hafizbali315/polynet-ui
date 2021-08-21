@@ -1,0 +1,728 @@
+:root {
+	--active-text-color: #76d1f0;
+	--hover-text-color: #76d1f0;
+	--theme-color: #5fccef;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgba(0, 0, 0, 1);
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#particles-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* ! Navbar */
+.navbar {
+	background-color: #000;
+	padding: 20px 0;
+	transition: all 0.5s ease;
+}
+
+.navbar.navbar-shrink {
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	background-color: var(--main-color);
+	padding: 10px 0;
+}
+
+.navbar > .container {
+	padding: 0 15px;
+}
+
+.navbar .navbar-brand {
+	display: flex;
+}
+
+.navbar .navbar-brand .logo_text {
+	padding-left: 20px;
+	margin-top: 2px;
+}
+
+.navbar .nav-item {
+	margin-left: 40px;
+}
+
+.navbar .nav-item .nav-link {
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 400;
+	padding: 5px 0;
+	position: relative;
+}
+
+.navbar .nav-item .nav-link:hover {
+	color: var(--active-text-color);
+}
+
+.navbar .nav-item .nav-link.active {
+	color: var(--active-text-color);
+}
+
+.navbar .nav-item .nav-link::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 1px;
+	background-color: #76d1f0;
+	transition: all 0.5s ease;
+	transform: scale(0);
+}
+
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover::before {
+	transform: scale(1);
+}
+
+.navbar__toggler {
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.navbar__toggler .hamburger {
+	display: block;
+}
+
+.navbar__toggler .cancel {
+	display: none;
+}
+
+/* ! Mobile Menu Sidebar */
+
+.mobile_menu_sidebar {
+	width: 45vw;
+	background: #33415c;
+	top: 90px;
+	color: #fff;
+	border-radius: 3px;
+	position: fixed;
+	z-index: 99;
+	right: 15px;
+
+	display: none;
+}
+
+.mobile_menu_sidebar ul {
+	padding: 20px 10px;
+	list-style: none;
+}
+
+.mobile_menu_sidebar ul .nav-link {
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 400;
+	padding: 10px 10px;
+	position: relative;
+}
+
+/* ! Hero Section */
+.hero_section .row {
+	min-height: 100vh;
+}
+
+.hero_section .content h1 {
+	font-size: 45px;
+	line-height: 63px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.hero_section .content p {
+	font-size: 16px;
+	line-height: 24px;
+	padding-right: 200px;
+	padding-top: 30px;
+	color: #caf0f8;
+}
+
+.hero_section .launch_app_content .img_container {
+	width: 180px;
+	height: 180px;
+	background: rgba(51, 65, 92, 0.5);
+	box-shadow: 0px 0px 10px rgba(118, 209, 240, 0.2);
+	backdrop-filter: blur(50px);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero_section .launch_app_content .img_container img {
+	width: 100px;
+	height: 100px;
+}
+
+.hero_section .launch_app_content button {
+	margin-top: 40px;
+	background: transparent;
+	width: 100%;
+	color: #ade8f4;
+	font-size: 16px;
+	padding: 10px 0 6px 0;
+	border: 2px solid #76d1f0;
+	border-radius: 10px;
+}
+
+/* ! About Section */
+.about_section {
+	margin-bottom: 150px;
+}
+
+.about_section .about_card {
+	height: 300px;
+	margin: 10px 0;
+	padding: 40px 100px;
+	border-radius: 10px;
+	background: linear-gradient(to right, rgba(51, 65, 92, 0.5), rgba(51, 65, 92, 0.4), #000);
+
+	display: flex;
+}
+
+.about_section .about_card .check_circle {
+	color: var(--theme-color);
+	font-size: 18px;
+	margin-right: 20px;
+}
+
+.about_section .about_card:hover .check_circle {
+	color: #fff;
+}
+
+.about_section .about_card .content h6 {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--theme-color);
+}
+
+.about_section .about_card:hover .content h6 {
+	color: #fff;
+}
+
+.about_section .about_card:hover {
+	transition: ease-in 0.3s;
+	background: var(--theme-color);
+}
+
+/* ! polyview_section*/
+.polyview_section {
+	text-align: center;
+	margin: 150px 0;
+}
+
+.polyview_section h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.polyview_section h2 span {
+	color: var(--theme-color);
+}
+
+.polyview_section .polyview_card {
+	margin-top: 30px;
+	padding: 70px 70px;
+
+	background: var(--theme-color);
+	border-radius: 10px;
+	box-shadow: 30px 30px rgba(51, 65, 92, 0.5);
+}
+
+.polyview_section .polyview_card .content {
+	font-size: 25px;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+/* ! Key Features */
+.key_features_section {
+	text-align: center;
+	margin: 150px 0;
+}
+
+.key_features_section h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.key_features_section h2 span {
+	color: var(--theme-color);
+}
+
+.key_features_section .key_features_card {
+	margin-top: 30px;
+	height: 200px;
+	padding: 50px;
+	background-color: rgba(51, 65, 92, 0.5);
+	border-radius: 10px;
+}
+
+.key_features_section .key_features_card:hover {
+	background: var(--theme-color);
+}
+
+.key_features_section .key_features_card i {
+	font-size: 30px;
+	color: var(--theme-color);
+}
+
+.key_features_section .key_features_card:hover i {
+	color: #fff;
+}
+
+.key_features_section .key_features_card p {
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+/* ! Waht it offers */
+.offers_section {
+	text-align: center;
+	margin: 150px 0;
+}
+
+.offers_section h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.offers_section h2 span {
+	color: var(--theme-color);
+}
+
+.offers_section .offers_card {
+	height: 150px;
+	border-radius: 8px;
+	margin-top: 20px;
+	padding: 40px;
+	background: rgba(51, 65, 92, 0.5);
+}
+
+.offers_section .offers_card:hover {
+	background: var(--theme-color);
+}
+
+.offers_section .offers_card i {
+	color: var(--theme-color);
+	font-size: 25px;
+}
+
+.offers_section .offers_card:hover i {
+	color: #fff;
+}
+
+.offers_section .offers_card h6 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+/* ! Our Investors */
+.investors_section {
+	margin: 150px 0;
+	text-align: center;
+}
+
+.investors_section h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.investors_section h2 span {
+	color: var(--theme-color);
+}
+
+.investors_section .img_container {
+	margin: 20px;
+}
+.investors_section .img_container img {
+	width: 100%;
+	height: auto;
+}
+
+/* ! Media Section */
+.media_section {
+	text-align: center;
+}
+
+.media_section h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.media_section h2 span {
+	color: var(--theme-color);
+}
+
+.media_section .img_container {
+	margin: 20px 20px;
+}
+.media_section .img_container img {
+	width: 100%;
+	height: auto;
+}
+
+/* ! NewsLetter */
+.newsletter_section {
+	margin-top: 100px;
+	background: linear-gradient(to bottom, rgba(95, 204, 239, 0), rgba(95, 204, 239, 0.2), rgba(95, 204, 239, 0.5));
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.newsletter_section input {
+	width: 40vw;
+	padding: 0 10px 0 20px;
+	height: 45px;
+	border-radius: 40px;
+	border: none;
+	color: #caf0f8;
+	outline: none;
+	background: rgba(51, 65, 92, 0.8);
+}
+
+.newsletter_section button {
+	margin: 0 10px;
+	height: 45px;
+	padding: 0 20px;
+	border-radius: 40px;
+	outline: none;
+	color: #fff;
+	background: var(--theme-color);
+}
+
+/*! Footer */
+.footer {
+	background-color: #000;
+	padding: 50px 0;
+}
+
+.footer .footer_logo img:first-child {
+	margin-right: 20px;
+}
+
+.footer .footer_logo img:last-child {
+	margin-top: 5px;
+}
+
+.footer .copyright_text {
+	opacity: 0.5;
+	padding: 30px 0;
+	font-size: 14px;
+}
+
+.footer .social_links {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 50px;
+}
+
+.footer .social_links .icon_container {
+	border: 1px solid var(--theme-color);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.footer .social_links .icon_container:hover {
+	background-color: var(--theme-color);
+}
+
+.footer .disclaimer .heading h6 {
+	width: 50px;
+	font-size: 16px;
+	margin-bottom: 20px;
+	padding: 10px 0;
+	color: #fff;
+	opacity: 0.7;
+	border-bottom: 3px solid #fff;
+}
+
+.footer .disclaimer p {
+	color: #fff;
+	opacity: 0.5;
+	font-size: 14px;
+}
+
+/* ! Road Map Section Starts*/
+
+.roadmap_section {
+	margin-top: 150px;
+}
+
+.roadmap_section h2 {
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	text-align: center;
+	color: var(--theme-color);
+}
+
+.timeline_container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 0;
+}
+.timeline {
+	width: 90%;
+	height: auto;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.timeline ul {
+	list-style: none;
+}
+.timeline ul li {
+	padding: 20px;
+	background-color: rgba(95, 204, 239, 0.2);
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+	margin-bottom: 0;
+}
+.timeline-content h1 {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+.timeline-content p {
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 300;
+}
+.timeline-content .date {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+	.timeline:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 51.8%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 100%;
+		background-color: gray;
+	}
+	.timeline ul li {
+		width: 50%;
+		position: relative;
+		margin-bottom: 50px;
+	}
+	.timeline ul li:nth-child(odd) {
+		float: left;
+		clear: right;
+		transform: translateX(-30px);
+		border-radius: 20px 0px 20px 20px;
+	}
+	.timeline ul li:nth-child(even) {
+		float: right;
+		clear: left;
+		transform: translateX(30px);
+		border-radius: 0px 20px 20px 20px;
+	}
+	.timeline ul li::before {
+		content: '';
+		position: absolute;
+		height: 20px;
+		width: 20px;
+		border-radius: 50%;
+		background-color: gray;
+		top: 0px;
+	}
+	.timeline ul li:nth-child(odd)::before {
+		transform: translate(50%, -50%);
+		right: -30px;
+	}
+	.timeline ul li:nth-child(even)::before {
+		transform: translate(-50%, -50%);
+		left: -30px;
+	}
+	.timeline-content .date {
+		position: absolute;
+		top: -30px;
+	}
+	.timeline ul li:hover::before {
+		background-color: aqua;
+	}
+}
+
+/* ! Road Map Section Ends*/
+
+@media screen and (max-width: 1400px) {
+	.about_section .about_card {
+		padding: 30px 80px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.navbar .nav-item {
+		margin-left: 35px;
+	}
+
+	.navbar .nav-item .nav-link {
+		font-size: 14px;
+	}
+
+	.about_section .about_card {
+		padding: 30px 50px;
+		font-size: 14px;
+	}
+
+	.polyview_section h2 {
+		font-size: 25px;
+	}
+
+	.polyview_section .polyview_card {
+		margin-top: 30px;
+		padding: 60px 60px;
+	}
+
+	.polyview_section .polyview_card .content {
+		font-size: 22px;
+	}
+
+	.key_features_section .key_features_card {
+		padding: 40px;
+	}
+
+	.key_features_section .key_features_card p {
+		font-size: 16px;
+	}
+
+	.footer .social_links {
+		margin: 0;
+	}
+
+	.footer .social_links .icon_container {
+		width: 45px;
+		height: 45px;
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.hero_section {
+		margin: 150px 10px;
+	}
+
+	.hero_section .content h1 {
+		font-size: 25px;
+		line-height: 130%;
+	}
+
+	.hero_section .content p {
+		font-size: 14px;
+		padding-right: 0;
+		padding-top: 30px;
+		line-height: 120%;
+	}
+
+	.about_section .about_card {
+		padding: 40px 100px;
+		font-size: 16px;
+	}
+
+	.polyview_section h2 {
+		font-size: 20px;
+	}
+
+	.polyview_section .polyview_card {
+		padding: 50px 50px;
+	}
+
+	.polyview_section .polyview_card .content {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.about_section .about_card {
+		padding: 30px 80px;
+		font-size: 16px;
+	}
+
+	.polyview_section .polyview_card {
+		padding: 50px 40px;
+	}
+
+	.polyview_section .polyview_card .content {
+		font-size: 18px;
+	}
+
+	.newsletter_section input {
+		width: 50vw;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about_section .about_card {
+		padding: 25px 30px;
+		font-size: 14px;
+	}
+
+	.polyview_section .polyview_card {
+		padding: 30px 30px;
+	}
+
+	.polyview_section .polyview_card .content {
+		font-size: 18px;
+	}
+
+	.footer .social_links {
+		margin: 0;
+	}
+
+	.footer .social_links .icon_container {
+		width: 35px;
+		height: 35px;
+		font-size: 18px;
+	}
+}
